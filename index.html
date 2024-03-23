@@ -67,21 +67,25 @@
 				<p>February 2022 - November 2023 · 1 yr 8 mos [Buenos Aires, Argentina] [Applied Computer Vision, B2B]</p>
 				<section>
 					
-					<h5>RESPONSIBILITIES</h5>
-					<ul>
-						<li>Led small teams in production-level projects.</li>
-						<li>Infrastructure for developers: VMs, Nvidia Dockers, and Jupyter Notebooks.</li>
-						<li>Develop and train custom models using TensorFlow and PyTorch.</li>
-						<li>Deploy computer vision systems in NVIDIA JETSON NANO and the cloud (Heroku).</li>
-					</ul>
+					<details>
+						<summary>RESPONSIBILITIES</summary>
+						<ul>
+							<li>Led small teams in production-level projects.</li>
+							<li>Infrastructure for developers: VMs, Nvidia Dockers, and Jupyter Notebooks.</li>
+							<li>Develop and train custom models using TensorFlow and PyTorch.</li>
+							<li>Deploy computer vision systems in NVIDIA JETSON NANO and the cloud (Heroku).</li>
+						</ul>
+					</details>
 				</section>
 				<section>
-					<h5>KEY ACCOMPLISHMENTS</h5>
-					<ul>
-						<li>Finished production-level projects: PPE, ADAS, bars segmentation, and danger zone alarms (reducing accidents).</li>
-						<li>Created custom datasets for Custom Objects, keypoint detection, and semantic segmentation.</li>
-						<li>Improved efficiency implementing SOTA (State of the Art) models like YOLO v8 or SAM.</li>
-					</ul>
+					<details>
+						<summary>KEY ACCOMPLISHMENTS</summary>
+						<ul>
+							<li>Finished production-level projects: PPE, ADAS, bars segmentation, and danger zone alarms (reducing accidents).</li>
+							<li>Created custom datasets for Custom Objects, keypoint detection, and semantic segmentation.</li>
+							<li>Improved efficiency implementing SOTA (State of the Art) models like YOLO v8 or SAM.</li>
+						</ul>
+					</details>
 				</section>
 				<footer>
 					<small> Used technologies: Python, TensorFlow, PyTorch, OpenCV, CUDA, Docker, Heroku, Google Cloud, JETSON NANO, JETSON ORIN, JETSON XAVIER.</small>
@@ -93,23 +97,26 @@
 					
 					<h4>Computer Vision & Machine Learning Engineer at Agot</h4>
 				</header>
-				<p>November 2023 - Present · 3 mos [Pittsburgh, United States] [Applied Computer Vision, B2B]</p>
-				
+				<p>November 2023 - Present · 5 mos [Pittsburgh, United States] [Applied Computer Vision, B2B]</p>
 				<section>
-					<h5>RESPONSIBILITIES</h5>
-					<ul>
-						<li>Deploy and maintain CV projects in JETSON ORIN, JETSON XAVIER, and Google Cloud Run jobs.</li>
-						<li>Develop and train custom models (detection, segmentation, key point detection).</li>
-					</ul>
+					<details>
+						<summary>RESPONSIBILITIES</summary>
+						<ul>
+							<li>Deploy and maintain CV projects in JETSON ORIN, JETSON XAVIER, and Google Cloud Run jobs.</li>
+							<li>Develop and train custom models (detection, segmentation, key point detection).</li>
+						</ul>
+					</details>
 				</section>
 				<section>
-					<h5>KEY ACCOMPLISHMENTS</h5>
-					<ul>
-						<li>Finished production-level project: waste report system (weekly waste reduced in stores).</li>
-						<li>Experience using Google Cloud suite for jobs, metrics, and alarm creation.</li>
-						<li>Improved skills in agile methodologies.</li>
-						<li>Adapted to an English-speaking environment.</li>
-					</ul>
+					<details>
+						<summary>KEY ACCOMPLISHMENTS</summary>
+						<ul>
+							<li>Finished production-level project: waste report system (weekly waste reduced in stores).</li>
+							<li>Experience using Google Cloud suite for jobs, metrics, and alarm creation.</li>
+							<li>Improved skills in agile methodologies.</li>
+							<li>Adapted to an English-speaking environment.</li>
+						</ul>
+					</details>
 				</section>
 				<footer>
 					<small> Used technologies: Python, TensorFlow, PyTorch, OpenCV, CUDA, Docker, Heroku, Google Cloud, JETSON NANO, JETSON ORIN, JETSON XAVIER.</small>
@@ -125,8 +132,12 @@
 		<section>
 			<h3 id="education">EDUCATION</h3>
 			<article>
+				<h3>Bachelor in Computer Science, University of Buenos Aires</h3>
+				<p>March 2018 - December 2023 [Buenos Aires, Argentina]</p>
+			</article>
+			<article>
 				<h3>Master in Computer Science, University of Buenos Aires</h3>
-				<p>March 2020 - December 2025 [Buenos Aires, Argentina]</p>
+				<p>March 2024 - December 2025 [Buenos Aires, Argentina]</p>
 			</article>
 		</section>
 		
@@ -134,6 +145,34 @@
 			<h3 id="languages">LANGUAGES</h3>
 			<p>Spanish (native), and English(fluent).</p>
 		</section>
-	</main>
-</body>
-</html>
+		<section>
+			<h2>Contact</h2>
+			<form method="post" action="/">
+				<fieldset>
+					<legend>Personal Information</legend>
+					<label style="display: block;">Name:
+						<input type="text" name="name" placeholder="Your Name" pattern="[a-zA-Z\s]+" minlength="2" maxlength="100" required >
+					</label>
+					<label style="display: block;">Email:
+						<input type="email" name="email" placeholder="youremail@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="100" required >
+					</label>
+				</fieldset>
+				<fieldset>
+					<legend>Additional Information</legend>
+					<label style="display: block;">Why are you contacting me?
+						<select name="why" required>
+							<option value="job">Job</option>
+							<option value="doubt">Doubt</option>
+							<option value="other">Other</option>
+						</select>
+						<label style="display: block;">Message:
+							<textarea name="message" placeholder="Write your message here" minlength="10" maxlength="500" required></textarea>
+						</label>
+					</fieldset>
+					<button type="submit">Send</button>
+				</form>
+			</section>
+		</main>
+	</body>
+	</html>
+	
