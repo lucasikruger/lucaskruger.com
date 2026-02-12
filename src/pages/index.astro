@@ -1,5 +1,5 @@
 ---
-const title = "Lucas Kruger | Computer Vision & ML Engineer";
+const title = "Lucas Ivan Kruger | Computer Vision & ML Engineer";
 ---
 
 <html lang="en">
@@ -7,39 +7,74 @@ const title = "Lucas Kruger | Computer Vision & ML Engineer";
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="description" content="Lucas Kruger - Computer Vision and Machine Learning Engineer" />
+		<meta name="description" content="Lucas Ivan Kruger - Computer Vision and Machine Learning Engineer with 4+ years of experience" />
 		<title>{title}</title>
 	</head>
 	<body>
 		<main>
 			<header>
-				<h1>Lucas Kruger</h1>
+				<h1>Lucas Ivan Kruger</h1>
 				<p class="subtitle">Computer Vision & Machine Learning Engineer</p>
 			</header>
 
 			<section>
 				<h2>About</h2>
 				<p>
-					I build intelligent systems that see and understand the world.
-					Specializing in computer vision and deep learning, I develop solutions
-					for image recognition, object detection, and visual understanding tasks.
+					4+ years designing and deploying computer vision and deep learning solutions
+					in startup and enterprise environments. I build production systems that see
+					and understand the world — from vehicle detection to safety monitoring.
 				</p>
 			</section>
 
 			<section>
-				<h2>Expertise</h2>
+				<h2>Experience</h2>
+				<div class="job">
+					<div class="job-header">
+						<strong>HME</strong>
+						<span class="job-date">2024 - Present</span>
+					</div>
+					<p class="job-title">Computer Vision & ML Engineer</p>
+					<p>Launched "Nitro Vision AI" now live in 20+ stores. Deploy CV workloads on Jetson Orin via Azure IoT Edge. Built RE-ID model for cross-camera vehicle tracking. Achieved 0.90+ mAP-50 with 20% fewer false positives in adverse weather.</p>
+				</div>
+				<div class="job">
+					<div class="job-header">
+						<strong>Agot</strong>
+						<span class="job-date">2023 - 2024</span>
+					</div>
+					<p class="job-title">Computer Vision & ML Engineer</p>
+					<p>Shipped waste report system reducing weekly waste in stores. Deployed CV projects on Jetson Orin/Xavier and Google Cloud Run.</p>
+				</div>
+				<div class="job">
+					<div class="job-header">
+						<strong>Zowllabs</strong>
+						<span class="job-date">2022 - 2023</span>
+					</div>
+					<p class="job-title">Computer Vision & ML Engineer</p>
+					<p>Led teams on production projects: PPE detection, ADAS, danger zone alarms. Reduced workplace accidents through real-time CV monitoring.</p>
+				</div>
+			</section>
+
+			<section>
+				<h2>Skills</h2>
 				<ul>
-					<li><strong>Computer Vision</strong> — Object detection, image segmentation, pose estimation</li>
-					<li><strong>Deep Learning</strong> — CNNs, transformers, model optimization</li>
-					<li><strong>MLOps</strong> — Model deployment, monitoring, and scaling</li>
-					<li><strong>Tools</strong> — Python, PyTorch, OpenCV, TensorFlow</li>
+					<li><strong>Vision & ML</strong> — Object detection, segmentation, RE-ID, keypoint detection, YOLO, SAM</li>
+					<li><strong>Frameworks</strong> — PyTorch, TensorFlow, OpenCV</li>
+					<li><strong>Edge & Cloud</strong> — Nvidia Jetson, Azure IoT, Google Cloud, AWS, Docker</li>
+					<li><strong>MLOps</strong> — ClearML, data pipelines, model deployment</li>
+					<li><strong>Languages</strong> — Python, C++</li>
 				</ul>
+			</section>
+
+			<section>
+				<h2>Education</h2>
+				<p><strong>Master's in Computer Science</strong><br/>University of Buenos Aires</p>
 			</section>
 
 			<section>
 				<h2>Contact</h2>
 				<p>
-					<a href="mailto:lucasikruger@gmail.com">lucasikruger@gmail.com</a> ·
+					<a href="mailto:lucasikruger@gmail.com">Email</a> ·
+					<a href="https://linkedin.com/in/lucas-kruger-59bab4209" target="_blank">LinkedIn</a> ·
 					<a href="https://github.com/lucasikruger" target="_blank">GitHub</a>
 				</p>
 			</section>
@@ -115,6 +150,37 @@ const title = "Lucas Kruger | Computer Vision & ML Engineer";
 
 			li:last-child {
 				border-bottom: none;
+			}
+
+			.job {
+				padding: 1rem 0;
+				border-bottom: 1px solid #222;
+			}
+
+			.job:last-child {
+				border-bottom: none;
+			}
+
+			.job-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 0.25rem;
+			}
+
+			.job-header strong {
+				color: #fff;
+			}
+
+			.job-date {
+				color: #666;
+				font-size: 0.9rem;
+			}
+
+			.job-title {
+				color: #888;
+				font-size: 0.9rem;
+				margin-bottom: 0.5rem;
 			}
 
 			a {
