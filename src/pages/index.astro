@@ -237,6 +237,14 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 			langToggle.addEventListener('click', () => {
 				setLanguage(currentLang === 'en' ? 'es' : 'en');
 			});
+
+			// Fix sticky hover on touch devices
+			document.querySelectorAll('.profile-wrapper, .lang-toggle, .download-btn, .tag').forEach(el => {
+				el.addEventListener('touchend', () => {
+					el.blur();
+					document.activeElement?.blur();
+				});
+			});
 		</script>
 
 		<style>
@@ -420,7 +428,7 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				transition: transform 0.3s, border-color 0.3s;
 			}
 
-			@media (hover: hover) {
+			@media (hover: hover) and (pointer: fine) {
 				.profile-wrapper:hover .profile-img {
 					filter: brightness(1);
 					border-color: var(--accent);
