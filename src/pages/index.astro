@@ -29,8 +29,8 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 	</head>
 	<body>
 		<button class="lang-toggle" id="langToggle" title="Switch language">
-			<span class="flag-back" id="flagBack">🇪🇸</span>
-			<span class="flag-front" id="flagFront">🇬🇧</span>
+			<span class="flag-circle" id="flagEN">🇬🇧</span>
+			<span class="flag-circle" id="flagES">🇪🇸</span>
 		</button>
 		<span class="lang-hint" id="langHint">Cambiar a español</span>
 
@@ -190,8 +190,8 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 		<script>
 			const langToggle = document.getElementById('langToggle');
 			const langHint = document.getElementById('langHint');
-			const flagFront = document.getElementById('flagFront');
-			const flagBack = document.getElementById('flagBack');
+			const flagEN = document.getElementById('flagEN');
+			const flagES = document.getElementById('flagES');
 			const enElements = document.querySelectorAll('.lang-en');
 			const esElements = document.querySelectorAll('.lang-es');
 
@@ -210,13 +210,17 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				if (lang === 'es') {
 					enElements.forEach(el => el.style.display = 'none');
 					esElements.forEach(el => el.style.display = '');
-					flagFront.textContent = '🇪🇸';
-					flagBack.textContent = '🇬🇧';
+					flagES.classList.add('front');
+					flagES.classList.remove('back');
+					flagEN.classList.add('back');
+					flagEN.classList.remove('front');
 				} else {
 					enElements.forEach(el => el.style.display = '');
 					esElements.forEach(el => el.style.display = 'none');
-					flagFront.textContent = '🇬🇧';
-					flagBack.textContent = '🇪🇸';
+					flagEN.classList.add('front');
+					flagEN.classList.remove('back');
+					flagES.classList.add('back');
+					flagES.classList.remove('front');
 				}
 			}
 
@@ -231,11 +235,7 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 
 			// Toggle on click
 			langToggle.addEventListener('click', () => {
-				langToggle.classList.add('switching');
-				setTimeout(() => {
-					setLanguage(currentLang === 'en' ? 'es' : 'en');
-					langToggle.classList.remove('switching');
-				}, 200);
+				setLanguage(currentLang === 'en' ? 'es' : 'en');
 			});
 		</script>
 
@@ -304,7 +304,7 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				padding: 0;
 			}
 
-			.flag-front, .flag-back {
+			.flag-circle {
 				position: absolute;
 				width: 2.5rem;
 				height: 2.5rem;
@@ -319,47 +319,37 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				transition: all 0.35s ease;
 			}
 
-			.flag-back {
+			#flagEN {
 				left: 0;
+			}
+
+			#flagES {
+				right: 0;
+			}
+
+			.flag-circle.back {
 				opacity: 0.5;
 				transform: scale(0.8);
 				z-index: 1;
 			}
 
-			.flag-front {
-				right: 0;
+			.flag-circle.front {
+				border-color: var(--accent);
 				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 				z-index: 2;
 			}
 
-			.lang-toggle:hover .flag-front {
-				border-color: var(--accent);
+			.lang-toggle:hover .flag-circle.front {
 				transform: scale(1.05);
 			}
 
-			.lang-toggle:hover .flag-back {
+			.lang-toggle:hover .flag-circle.back {
 				opacity: 0.7;
 				transform: scale(0.85);
 			}
 
-			.lang-toggle.switching .flag-front {
-				animation: swapToBack 0.35s ease forwards;
-			}
-
-			.lang-toggle.switching .flag-back {
-				animation: swapToFront 0.35s ease forwards;
-			}
-
-			@keyframes swapToBack {
-				0% { transform: scale(1); opacity: 1; z-index: 2; }
-				50% { transform: scale(0.85); opacity: 0.6; }
-				100% { transform: scale(0.8); opacity: 0.5; z-index: 1; }
-			}
-
-			@keyframes swapToFront {
-				0% { transform: scale(0.8); opacity: 0.5; z-index: 1; }
-				50% { transform: scale(1.05); opacity: 0.8; }
-				100% { transform: scale(1); opacity: 1; z-index: 2; }
+			.lang-toggle:focus {
+				outline: none;
 			}
 
 			.lang-hint {
@@ -634,7 +624,7 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 					height: 2rem;
 				}
 
-				.flag-front, .flag-back {
+				.flag-circle {
 					width: 2rem;
 					height: 2rem;
 					font-size: 1rem;
