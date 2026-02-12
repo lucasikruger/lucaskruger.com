@@ -420,15 +420,17 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				transition: transform 0.3s, border-color 0.3s;
 			}
 
-			.profile-wrapper:hover .profile-img {
-				filter: brightness(1);
-				border-color: var(--accent);
-				box-shadow: 0 0 30px rgba(102, 126, 234, 0.6), 0 0 60px rgba(118, 75, 162, 0.4);
-			}
+			@media (hover: hover) {
+				.profile-wrapper:hover .profile-img {
+					filter: brightness(1);
+					border-color: var(--accent);
+					box-shadow: 0 0 30px rgba(102, 126, 234, 0.6), 0 0 60px rgba(118, 75, 162, 0.4);
+				}
 
-			.profile-wrapper:hover .status-emoji {
-				transform: rotate(15deg) scale(1.1);
-				border-color: var(--accent);
+				.profile-wrapper:hover .status-emoji {
+					transform: rotate(15deg) scale(1.1);
+					border-color: var(--accent);
+				}
 			}
 
 			h1 {
