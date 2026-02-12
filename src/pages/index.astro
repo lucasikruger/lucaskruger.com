@@ -245,6 +245,9 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 					document.activeElement?.blur();
 				});
 			});
+
+			// Disable context menu on profile image
+			document.querySelector('.profile-img').addEventListener('contextmenu', e => e.preventDefault());
 		</script>
 
 		<style>
@@ -410,6 +413,8 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 				filter: brightness(0.9);
 				transition: filter 0.3s, box-shadow 0.3s, border-color 0.3s;
+				user-select: none;
+				-webkit-user-drag: none;
 			}
 
 			.status-emoji {
