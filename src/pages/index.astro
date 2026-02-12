@@ -8,7 +8,8 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="manifest" href="/site.webmanifest" />
 		<link rel="apple-touch-icon" href="/favicon.svg" />
-		<meta name="theme-color" content="#0a0a0a" />
+		<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+		<meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="description" content="Lucas Ivan Kruger - Machine Learning and Computer Vision Engineer with 4+ years of experience" />
 		<title>{title}</title>
@@ -27,6 +28,12 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 		<meta name="twitter:image" content="https://lucaskruger.com/profile.webp" />
 	</head>
 	<body>
+		<button class="lang-toggle" id="langToggle" title="Switch language">
+			<span class="flag-back" id="flagBack">🇪🇸</span>
+			<span class="flag-front" id="flagFront">🇬🇧</span>
+		</button>
+		<span class="lang-hint" id="langHint">Cambiar a español</span>
+
 		<main>
 			<header>
 				<div class="profile-wrapper">
@@ -34,7 +41,10 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 					<span class="status-emoji">🧉</span>
 				</div>
 				<h1>Lucas Ivan Kruger</h1>
-				<p class="subtitle">Computer Scientist · Machine Learning & Computer Vision</p>
+				<p class="subtitle">
+					<span class="lang-en">Computer Scientist · Machine Learning & Computer Vision</span>
+					<span class="lang-es" style="display:none">Científico de la Computación · Machine Learning & Computer Vision</span>
+				</p>
 				<div class="social-links">
 					<a href="mailto:lucasikruger@gmail.com" title="Email">
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -49,50 +59,77 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				<div class="header-actions">
 					<a href="/cv.pdf" download class="download-btn">
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-						Download CV
+						<span class="lang-en">Download CV</span>
+						<span class="lang-es" style="display:none">Descargar CV</span>
 					</a>
 				</div>
 			</header>
 
 			<section class="about">
-				<h2>About</h2>
+				<h2>
+					<span class="lang-en">About</span>
+					<span class="lang-es" style="display:none">Sobre mí</span>
+				</h2>
 				<p class="about-text">
-					<strong>4+ years</strong> designing and deploying computer vision and deep learning solutions
-					in startup and enterprise environments. I build <strong>production systems</strong> that see
-					and understand the world — from vehicle detection to safety monitoring.
+					<span class="lang-en"><strong>4+ years</strong> designing and deploying computer vision and deep learning solutions in startup and enterprise environments. I build <strong>production systems</strong> that see and understand the world — from vehicle detection to safety monitoring.</span>
+					<span class="lang-es" style="display:none"><strong>+4 años</strong> diseñando y desplegando soluciones de visión por computadora y deep learning en startups y empresas. Construyo <strong>sistemas en producción</strong> que ven y entienden el mundo — desde detección de vehículos hasta monitoreo de seguridad.</span>
 				</p>
 			</section>
 
 			<section>
-				<h2>Experience</h2>
+				<h2>
+					<span class="lang-en">Experience</span>
+					<span class="lang-es" style="display:none">Experiencia</span>
+				</h2>
 				<div class="job">
 					<div class="job-header">
-						<strong>HME</strong>
-						<span class="job-date">May 2024 - Present</span>
+						<strong>HME <span class="flag">🇺🇸</span></strong>
+						<span class="job-date">
+							<span class="lang-en">May 2024 - Present</span>
+							<span class="lang-es" style="display:none">May 2024 - Presente</span>
+						</span>
 					</div>
 					<p class="job-title">Computer Vision & ML Engineer</p>
-					<p>Launched "Nitro Vision AI" now live in 20+ stores. Deploy CV workloads on Jetson Orin via Azure IoT Edge. Built RE-ID model for cross-camera vehicle tracking. Achieved 0.90+ mAP-50 with 20% fewer false positives in adverse weather.</p>
+					<p>
+						<span class="lang-en">Launched "Nitro Vision AI" now live in 20+ stores. Deploy CV workloads on Jetson Orin via Azure IoT Edge. Built RE-ID model for cross-camera vehicle tracking. Achieved 0.90+ mAP-50 with 20% fewer false positives in adverse weather.</span>
+						<span class="lang-es" style="display:none">Lancé "Nitro Vision AI" activo en 20+ tiendas. Deploy de cargas CV en Jetson Orin via Azure IoT Edge. Desarrollé modelo RE-ID para tracking de vehículos entre cámaras. Logré 0.90+ mAP-50 con 20% menos falsos positivos en clima adverso.</span>
+					</p>
 				</div>
 				<div class="job">
 					<div class="job-header">
-						<strong>Agot</strong>
-						<span class="job-date">Nov 2023 - May 2024</span>
+						<strong>Agot <span class="flag">🇺🇸</span></strong>
+						<span class="job-date">
+							<span class="lang-en">Nov 2023 - May 2024</span>
+							<span class="lang-es" style="display:none">Nov 2023 - May 2024</span>
+						</span>
 					</div>
 					<p class="job-title">Computer Vision & ML Engineer</p>
-					<p>Shipped waste report system reducing weekly waste in stores. Deployed CV projects on Jetson Orin/Xavier and Google Cloud Run.</p>
+					<p>
+						<span class="lang-en">Shipped waste report system reducing weekly waste in stores. Deployed CV projects on Jetson Orin/Xavier and Google Cloud Run.</span>
+						<span class="lang-es" style="display:none">Implementé sistema de reporte de desperdicios reduciendo el desperdicio semanal en tiendas. Deploy de proyectos CV en Jetson Orin/Xavier y Google Cloud Run.</span>
+					</p>
 				</div>
 				<div class="job">
 					<div class="job-header">
-						<strong>Zowllabs</strong>
-						<span class="job-date">Feb 2022 - Nov 2023</span>
+						<strong>Zowllabs <span class="flag">🇦🇷</span></strong>
+						<span class="job-date">
+							<span class="lang-en">Feb 2022 - Nov 2023</span>
+							<span class="lang-es" style="display:none">Feb 2022 - Nov 2023</span>
+						</span>
 					</div>
 					<p class="job-title">Computer Vision & ML Engineer</p>
-					<p>Led teams on production projects: PPE detection, ADAS, danger zone alarms. Reduced workplace accidents through real-time CV monitoring.</p>
+					<p>
+						<span class="lang-en">Led teams on production projects: PPE detection, ADAS, danger zone alarms. Reduced workplace accidents through real-time CV monitoring.</span>
+						<span class="lang-es" style="display:none">Lideré equipos en proyectos productivos: detección de EPP, ADAS, alarmas de zonas peligrosas. Reduje accidentes laborales mediante monitoreo CV en tiempo real.</span>
+					</p>
 				</div>
 			</section>
 
 			<section class="skills">
-				<h2>Skills</h2>
+				<h2>
+					<span class="lang-en">Skills</span>
+					<span class="lang-es" style="display:none">Habilidades</span>
+				</h2>
 				<div class="skill-group">
 					<span class="skill-label">Vision & ML</span>
 					<div class="skill-tags">
@@ -122,7 +159,10 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 					</div>
 				</div>
 				<div class="skill-group">
-					<span class="skill-label">Languages</span>
+					<span class="skill-label">
+						<span class="lang-en">Languages</span>
+						<span class="lang-es" style="display:none">Lenguajes</span>
+					</span>
 					<div class="skill-tags">
 						<span class="tag">Python</span>
 						<span class="tag">C++</span>
@@ -131,11 +171,73 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 			</section>
 
 			<section>
-				<h2>Education</h2>
-				<p><strong>Master's in Computer Science</strong><br/>University of Buenos Aires</p>
+				<h2>
+					<span class="lang-en">Education</span>
+					<span class="lang-es" style="display:none">Educación</span>
+				</h2>
+				<p>
+					<strong>
+						<span class="lang-en">Master's in Computer Science</span>
+						<span class="lang-es" style="display:none">Maestría en Ciencias de la Computación</span>
+					</strong><br/>
+					<span class="lang-en">University of Buenos Aires</span>
+					<span class="lang-es" style="display:none">Universidad de Buenos Aires</span>
+					<span class="flag">🇦🇷</span>
+				</p>
 			</section>
+		</main>
 
-					</main>
+		<script>
+			const langToggle = document.getElementById('langToggle');
+			const langHint = document.getElementById('langHint');
+			const flagFront = document.getElementById('flagFront');
+			const flagBack = document.getElementById('flagBack');
+			const enElements = document.querySelectorAll('.lang-en');
+			const esElements = document.querySelectorAll('.lang-es');
+
+			// Detect browser language
+			const browserLang = navigator.language || navigator.userLanguage;
+			const savedLang = localStorage.getItem('lang');
+			// Default to English, only use saved preference
+			let currentLang = savedLang || 'en';
+
+			function setLanguage(lang) {
+				currentLang = lang;
+				localStorage.setItem('lang', lang);
+				document.documentElement.lang = lang;
+				langHint.style.display = 'none';
+
+				if (lang === 'es') {
+					enElements.forEach(el => el.style.display = 'none');
+					esElements.forEach(el => el.style.display = '');
+					flagFront.textContent = '🇪🇸';
+					flagBack.textContent = '🇬🇧';
+				} else {
+					enElements.forEach(el => el.style.display = '');
+					esElements.forEach(el => el.style.display = 'none');
+					flagFront.textContent = '🇬🇧';
+					flagBack.textContent = '🇪🇸';
+				}
+			}
+
+			// Set initial language
+			setLanguage(currentLang);
+
+			// Show hint if browser is Spanish and no saved preference
+			if (browserLang.startsWith('es') && !savedLang) {
+				langHint.style.display = 'block';
+				setTimeout(() => { langHint.style.display = 'none'; }, 5000);
+			}
+
+			// Toggle on click
+			langToggle.addEventListener('click', () => {
+				langToggle.classList.add('switching');
+				setTimeout(() => {
+					setLanguage(currentLang === 'en' ? 'es' : 'en');
+					langToggle.classList.remove('switching');
+				}, 200);
+			});
+		</script>
 
 		<style>
 			* {
@@ -144,10 +246,36 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				box-sizing: border-box;
 			}
 
+			:root {
+				--bg: #0a0a0a;
+				--bg-secondary: #1a1a1a;
+				--text: #e5e5e5;
+				--text-secondary: #ccc;
+				--text-muted: #999;
+				--text-bright: #fff;
+				--border: #333;
+				--border-light: #444;
+				--accent: #667eea;
+				--accent-secondary: #764ba2;
+			}
+
+			@media (prefers-color-scheme: light) {
+				:root {
+					--bg: #f5f5f5;
+					--bg-secondary: #fff;
+					--text: #1a1a1a;
+					--text-secondary: #333;
+					--text-muted: #666;
+					--text-bright: #000;
+					--border: #ddd;
+					--border-light: #ccc;
+				}
+			}
+
 			html {
 				font-family: system-ui, -apple-system, sans-serif;
-				background: #0a0a0a;
-				color: #e5e5e5;
+				background: var(--bg);
+				color: var(--text);
 			}
 
 			body {
@@ -160,6 +288,106 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 			main {
 				max-width: 600px;
 				width: 100%;
+			}
+
+			.lang-toggle {
+				position: fixed;
+				top: 1.5rem;
+				right: 1.5rem;
+				background: transparent;
+				border: none;
+				cursor: pointer;
+				z-index: 100;
+				width: 4.25rem;
+				height: 2.5rem;
+				padding: 0;
+			}
+
+			.flag-front, .flag-back {
+				position: absolute;
+				width: 2.5rem;
+				height: 2.5rem;
+				border-radius: 50%;
+				background: var(--bg-secondary);
+				border: 2px solid var(--border);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.25rem;
+				line-height: 1;
+				transition: all 0.35s ease;
+			}
+
+			.flag-back {
+				left: 0;
+				opacity: 0.5;
+				transform: scale(0.8);
+				z-index: 1;
+			}
+
+			.flag-front {
+				right: 0;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+				z-index: 2;
+			}
+
+			.lang-toggle:hover .flag-front {
+				border-color: var(--accent);
+				transform: scale(1.05);
+			}
+
+			.lang-toggle:hover .flag-back {
+				opacity: 0.7;
+				transform: scale(0.85);
+			}
+
+			.lang-toggle.switching .flag-front {
+				animation: swapToBack 0.35s ease forwards;
+			}
+
+			.lang-toggle.switching .flag-back {
+				animation: swapToFront 0.35s ease forwards;
+			}
+
+			@keyframes swapToBack {
+				0% { transform: scale(1); opacity: 1; z-index: 2; }
+				50% { transform: scale(0.85); opacity: 0.6; }
+				100% { transform: scale(0.8); opacity: 0.5; z-index: 1; }
+			}
+
+			@keyframes swapToFront {
+				0% { transform: scale(0.8); opacity: 0.5; z-index: 1; }
+				50% { transform: scale(1.05); opacity: 0.8; }
+				100% { transform: scale(1); opacity: 1; z-index: 2; }
+			}
+
+			.lang-hint {
+				display: none;
+				position: fixed;
+				top: 1.5rem;
+				right: 5rem;
+				background: var(--accent);
+				color: #fff;
+				padding: 0.5rem 1rem;
+				border-radius: 8px;
+				font-size: 0.85rem;
+				z-index: 100;
+				animation: fadeIn 0.3s ease;
+			}
+
+			.lang-hint::after {
+				content: '';
+				position: absolute;
+				right: -8px;
+				top: 50%;
+				transform: translateY(-50%);
+				border: 4px solid transparent;
+				border-left-color: var(--accent);
+			}
+
+			@keyframes fadeIn {
+				from { opacity: 0; transform: translateX(10px); }
+				to { opacity: 1; transform: translateX(0); }
 			}
 
 			header {
@@ -179,8 +407,8 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				height: 150px;
 				border-radius: 50%;
 				object-fit: cover;
-				border: 3px solid #444;
-				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+				border: 3px solid var(--border-light);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 				filter: brightness(0.9);
 				transition: filter 0.3s, box-shadow 0.3s, border-color 0.3s;
 			}
@@ -190,8 +418,8 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				bottom: 5px;
 				left: 5px;
 				font-size: 1.5rem;
-				background: #1a1a1a;
-				border: 2px solid #333;
+				background: var(--bg-secondary);
+				border: 2px solid var(--border);
 				border-radius: 50%;
 				width: 2.5rem;
 				height: 2.5rem;
@@ -203,23 +431,23 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 
 			.profile-wrapper:hover .profile-img {
 				filter: brightness(1);
-				border-color: #667eea;
+				border-color: var(--accent);
 				box-shadow: 0 0 30px rgba(102, 126, 234, 0.6), 0 0 60px rgba(118, 75, 162, 0.4);
 			}
 
 			.profile-wrapper:hover .status-emoji {
 				transform: rotate(15deg) scale(1.1);
-				border-color: #667eea;
+				border-color: var(--accent);
 			}
 
 			h1 {
 				font-size: 2.5rem;
 				font-weight: 600;
-				color: #fff;
+				color: var(--text-bright);
 			}
 
 			.subtitle {
-				color: #aaa;
+				color: var(--text-muted);
 				font-size: 1.1rem;
 				margin-top: 0.5rem;
 			}
@@ -227,7 +455,7 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 			section {
 				margin-bottom: 2.5rem;
 				padding-bottom: 2.5rem;
-				border-bottom: 1px solid #333;
+				border-bottom: 1px solid var(--border);
 			}
 
 			section:last-child {
@@ -238,24 +466,23 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				font-size: 0.9rem;
 				text-transform: uppercase;
 				letter-spacing: 0.1em;
-				color: #999;
+				color: var(--text-muted);
 				margin-bottom: 1rem;
 			}
 
 			p {
 				line-height: 1.6;
-				color: #ccc;
+				color: var(--text-secondary);
 				letter-spacing: 0.01em;
 			}
 
 			.about-text {
 				font-size: 1.1rem;
 				line-height: 1.7;
-				color: #ddd;
 			}
 
 			.about-text strong {
-				color: #fff;
+				color: var(--text-bright);
 			}
 
 			.skill-group {
@@ -268,7 +495,7 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 
 			.skill-label {
 				display: block;
-				color: #fff;
+				color: var(--text-bright);
 				font-weight: 500;
 				margin-bottom: 0.5rem;
 				font-size: 0.95rem;
@@ -281,9 +508,9 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 			}
 
 			.tag {
-				background: #1a1a1a;
-				border: 1px solid #333;
-				color: #bbb;
+				background: var(--bg-secondary);
+				border: 1px solid var(--border);
+				color: var(--text-muted);
 				padding: 0.35rem 0.75rem;
 				border-radius: 20px;
 				font-size: 0.85rem;
@@ -291,13 +518,13 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 			}
 
 			.tag:hover {
-				border-color: #667eea;
-				color: #fff;
+				border-color: var(--accent);
+				color: var(--text-bright);
 			}
 
 			.job {
 				padding: 1rem 0;
-				border-bottom: 1px solid #333;
+				border-bottom: 1px solid var(--border);
 			}
 
 			.job:last-child {
@@ -312,29 +539,34 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 			}
 
 			.job-header strong {
-				color: #fff;
+				color: var(--text-bright);
+			}
+
+			.flag {
+				font-size: 0.9rem;
+				margin-left: 0.25rem;
 			}
 
 			.job-date {
-				color: #999;
+				color: var(--text-muted);
 				font-size: 0.9rem;
 			}
 
 			.job-title {
-				color: #aaa;
+				color: var(--text-muted);
 				font-size: 0.9rem;
 				margin-bottom: 0.5rem;
 			}
 
 			a {
-				color: #fff;
+				color: var(--text-bright);
 				text-decoration: none;
-				border-bottom: 1px solid #555;
+				border-bottom: 1px solid var(--border-light);
 				transition: border-color 0.2s;
 			}
 
 			a:hover {
-				border-color: #fff;
+				border-color: var(--text-bright);
 			}
 
 			.social-links {
@@ -345,13 +577,13 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 			}
 
 			.social-links a {
-				color: #999;
+				color: var(--text-muted);
 				border: none;
 				transition: color 0.2s;
 			}
 
 			.social-links a:hover {
-				color: #fff;
+				color: var(--text-bright);
 			}
 
 			.header-actions {
@@ -365,7 +597,7 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				align-items: center;
 				gap: 0.5rem;
 				padding: 0.75rem 1.5rem;
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
 				color: #fff;
 				border: none;
 				border-radius: 8px;
@@ -392,6 +624,26 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 
 				main {
 					padding: 0 1rem;
+				}
+
+				.lang-toggle {
+					top: 1rem;
+					right: 1rem;
+					width: 3.5rem;
+					height: 2rem;
+				}
+
+				.flag-front, .flag-back {
+					width: 2rem;
+					height: 2rem;
+					font-size: 1rem;
+				}
+
+				.lang-hint {
+					top: 1rem;
+					right: 4.5rem;
+					font-size: 0.8rem;
+					padding: 0.4rem 0.75rem;
 				}
 
 				.profile-wrapper {
@@ -433,10 +685,6 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 
 				.job-date {
 					font-size: 0.85rem;
-				}
-
-				li {
-					font-size: 0.95rem;
 				}
 			}
 		</style>
