@@ -13,7 +13,10 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 	<body>
 		<main>
 			<header>
-				<img src="/profile.webp" alt="Lucas Ivan Kruger" class="profile-img" />
+				<div class="profile-wrapper">
+					<img src="/profile.webp" alt="Lucas Ivan Kruger" class="profile-img" />
+					<span class="status-emoji">🧉</span>
+				</div>
 				<h1>Lucas Ivan Kruger</h1>
 				<p class="subtitle">Computer Scientist · Machine Learning & Computer Vision</p>
 				<div class="social-links">
@@ -35,9 +38,9 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				</div>
 			</header>
 
-			<section>
+			<section class="about">
 				<h2>About</h2>
-				<p>
+				<p class="about-text">
 					<strong>4+ years</strong> designing and deploying computer vision and deep learning solutions
 					in startup and enterprise environments. I build <strong>production systems</strong> that see
 					and understand the world — from vehicle detection to safety monitoring.
@@ -72,15 +75,43 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				</div>
 			</section>
 
-			<section>
+			<section class="skills">
 				<h2>Skills</h2>
-				<ul>
-					<li><strong>Vision & ML</strong> — Object detection, segmentation, RE-ID, keypoint detection, YOLO, SAM</li>
-					<li><strong>Frameworks</strong> — PyTorch, TensorFlow, OpenCV</li>
-					<li><strong>Edge & Cloud</strong> — Nvidia Jetson, Azure IoT, Google Cloud, AWS, Docker</li>
-					<li><strong>MLOps</strong> — ClearML, data pipelines, model deployment</li>
-					<li><strong>Languages</strong> — Python, C++</li>
-				</ul>
+				<div class="skill-group">
+					<span class="skill-label">Vision & ML</span>
+					<div class="skill-tags">
+						<span class="tag">Object Detection</span>
+						<span class="tag">Segmentation</span>
+						<span class="tag">RE-ID</span>
+						<span class="tag">YOLO</span>
+						<span class="tag">SAM</span>
+					</div>
+				</div>
+				<div class="skill-group">
+					<span class="skill-label">Frameworks</span>
+					<div class="skill-tags">
+						<span class="tag">PyTorch</span>
+						<span class="tag">TensorFlow</span>
+						<span class="tag">OpenCV</span>
+					</div>
+				</div>
+				<div class="skill-group">
+					<span class="skill-label">Edge & Cloud</span>
+					<div class="skill-tags">
+						<span class="tag">Nvidia Jetson</span>
+						<span class="tag">Azure IoT</span>
+						<span class="tag">Google Cloud</span>
+						<span class="tag">AWS</span>
+						<span class="tag">Docker</span>
+					</div>
+				</div>
+				<div class="skill-group">
+					<span class="skill-label">Languages</span>
+					<div class="skill-tags">
+						<span class="tag">Python</span>
+						<span class="tag">C++</span>
+					</div>
+				</div>
 			</section>
 
 			<section>
@@ -120,22 +151,49 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				text-align: center;
 			}
 
+			.profile-wrapper {
+				position: relative;
+				display: inline-block;
+				margin-top: 2rem;
+				margin-bottom: 1.5rem;
+			}
+
 			.profile-img {
 				width: 150px;
 				height: 150px;
 				border-radius: 50%;
 				object-fit: cover;
-				margin-top: 2rem;
-				margin-bottom: 1.5rem;
 				border: 3px solid #444;
 				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 				filter: brightness(0.9);
-				transition: filter 0.3s, box-shadow 0.3s;
+				transition: filter 0.3s, box-shadow 0.3s, border-color 0.3s;
 			}
 
-			.profile-img:hover {
+			.status-emoji {
+				position: absolute;
+				bottom: 5px;
+				left: 5px;
+				font-size: 1.5rem;
+				background: #1a1a1a;
+				border: 2px solid #333;
+				border-radius: 50%;
+				width: 2.5rem;
+				height: 2.5rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: transform 0.3s, border-color 0.3s;
+			}
+
+			.profile-wrapper:hover .profile-img {
 				filter: brightness(1);
+				border-color: #667eea;
 				box-shadow: 0 0 30px rgba(102, 126, 234, 0.6), 0 0 60px rgba(118, 75, 162, 0.4);
+			}
+
+			.profile-wrapper:hover .status-emoji {
+				transform: rotate(15deg) scale(1.1);
+				border-color: #667eea;
 			}
 
 			h1 {
@@ -174,18 +232,51 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 				letter-spacing: 0.01em;
 			}
 
-			ul {
-				list-style: none;
+			.about-text {
+				font-size: 1.1rem;
+				line-height: 1.7;
+				color: #ddd;
 			}
 
-			li {
-				padding: 0.5rem 0;
-				color: #ccc;
-				border-bottom: 1px solid #333;
+			.about-text strong {
+				color: #fff;
 			}
 
-			li:last-child {
-				border-bottom: none;
+			.skill-group {
+				margin-bottom: 1.25rem;
+			}
+
+			.skill-group:last-child {
+				margin-bottom: 0;
+			}
+
+			.skill-label {
+				display: block;
+				color: #fff;
+				font-weight: 500;
+				margin-bottom: 0.5rem;
+				font-size: 0.95rem;
+			}
+
+			.skill-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+			}
+
+			.tag {
+				background: #1a1a1a;
+				border: 1px solid #333;
+				color: #bbb;
+				padding: 0.35rem 0.75rem;
+				border-radius: 20px;
+				font-size: 0.85rem;
+				transition: border-color 0.2s, color 0.2s;
+			}
+
+			.tag:hover {
+				border-color: #667eea;
+				color: #fff;
 			}
 
 			.job {
@@ -287,10 +378,26 @@ const title = "Lucas Ivan Kruger | ML & CV Engineer";
 					padding: 0 1rem;
 				}
 
+				.profile-wrapper {
+					margin-top: 1rem;
+				}
+
 				.profile-img {
 					width: 120px;
 					height: 120px;
-					margin-top: 1rem;
+				}
+
+				.status-emoji {
+					font-size: 1.25rem;
+					width: 2rem;
+					height: 2rem;
+					bottom: 2px;
+					left: 2px;
+				}
+
+				p {
+					font-size: 0.9rem;
+					text-align: left;
 				}
 
 				h1 {
